@@ -9,7 +9,7 @@
 
     $watchs = explode(":", $watchIds);
     sort($watchs, SORT_STRING);
-    $watchIds = $watchs;//explode(':', '2:20:25:28:4:5:7:8');
+    $watchIds = $watchs;
  	
     $ts = time();
     $nonce = randomString();
