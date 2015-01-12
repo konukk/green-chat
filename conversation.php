@@ -10,8 +10,8 @@
 	$_POST['convid'] = md5(implode(':', $_POST['convid']));
 
 	$header = array(
-		"X-AVOSCloud-Application-Id: k0zpeydq10h6ah8ij60tjw58oz51yr2cgvbiyix26t0feqgs",
-		"X-AVOSCloud-Application-Key: 646bd3p8wdf3vi46u32dm1bn6epw1qkvfxybn413zgazqdiq"
+		"X-AVOSCloud-Application-Id: 0s66p2ntvx0q56pk5mh8wxa7cuegr57w5abvb7nwv5dqymyo",
+		"X-AVOSCloud-Application-Key: m4qivbjnn77tyox755169eslqtof174pq7tzaummnu3va9g4"
 	);
 
 	$res = httpRequest( 'https://leancloud.cn/1.1/rtm/messages/logs/', 'get', $_POST, $header);
