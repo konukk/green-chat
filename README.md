@@ -1,8 +1,6 @@
 # green-chat
 A simply web im, javascript chat ui component. javascript即时聊天组件
 
-![](https://github.com/kinkk/green-chat/blob/master/image/screenshots.png)
-
 ## 功能
 - 单人聊天
 - 在线、下线状态
