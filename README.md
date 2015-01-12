@@ -31,6 +31,14 @@ A simply web im, javascript chat ui component. javascript即时聊天组件
   1. 实现了 获取聊天记录-conversation.php, 签名认证-signature.php
   2. 如使用本项目代码需申请LeanCloud账号，将im.html, conversation.php, signature.php中的appId, appKey, masterKey做相应替换
   
+  得说下签名认证(signature.php)的实现，略坑...
+  具体要求可见[权限和认证](https://cn.avoscloud.com/docs/realtime.html),说下注意的点
+  ```
+    1. peerid 是“字符“，是字符不是数字
+    1. 要实现Hmac-sha1算法，跟Base64什么的可没有关系。。。详见程序
+    2. 最容易忽视的是:watch_peer_id这个变量需要按照”字符“生升排序的
+  ```
+  
 ## 如何集成
 1. 加载相关依赖（详见例子im.html）
 
