@@ -33,8 +33,8 @@ A simply web im, javascript chat ui component. javascript即时聊天组件
   具体要求可见[权限和认证](https://cn.avoscloud.com/docs/realtime.html),说下注意的点
   ```
     1. peerid 是“字符“，是字符不是数字
-    1. 要实现Hmac-sha1算法，跟Base64什么的可没有关系。。。详见程序
-    2. 最容易忽视的是:watch_peer_id这个变量，需要按照”字符“升序排序的，字符升序！
+    2. 要实现Hmac-sha1算法，跟Base64什么的可没有关系。。。详见程序
+    3. 最容易忽视的是:watch_peer_id这个变量，需要按照”字符“升序排序的，字符升序！
   ```
   
 ## 如何集成
