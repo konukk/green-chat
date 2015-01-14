@@ -1,19 +1,19 @@
 <?php
 
-	$appId = "0s66p2ntvx0q56pk5mh8wxa7cuegr57w5abvb7nwv5dqymyo";
-	$masterKey = "69jeuvv9m9qc6ruqvo8zoe2l9ksztz7p9oembgmba4dymfih";
+    $appId = "0s66p2ntvx0q56pk5mh8wxa7cuegr57w5abvb7nwv5dqymyo";
+    $masterKey = "69jeuvv9m9qc6ruqvo8zoe2l9ksztz7p9oembgmba4dymfih";
 
-	$peerId = $_POST['self_id'];
-	$watchIds = $_POST['watch_ids'];
-	$superPeer = isset($_POST['sp']) ? $_POST['sp'] : false;
+    $peerId = $_POST['self_id'];
+    $watchIds = $_POST['watch_ids'];
+    $superPeer = isset($_POST['sp']) ? $_POST['sp'] : false;
 
     $watchs = explode(":", $watchIds);
     sort($watchs, SORT_STRING);
     $watchIds = $watchs;
- 	
+    	
     $ts = time();
     $nonce = randomString();
- 	
+    	
     $mArray = array($appId, $peerId, implode(':', $watchIds), $ts, $nonce);
 
     $msg = implode(':', $mArray);
@@ -24,11 +24,11 @@
     $sig = sign($msg, $masterKey);
 
     $res = array("nonce" => $nonce, "timestamp" => $ts, "signature" => $sig, "watchIds" => $watchIds, "sp" => $superPeer);
- 
+
     echo json_encode($res);
 
 
-	function sign($str, $key) {
+    function sign($str, $key) {
         $signature = "";
         if (function_exists('hash_hmac')) {
             $hmac = hash_hmac("sha1", $str, $key, true);
@@ -56,7 +56,7 @@
         return $signature;
     }
 
-	function randomString( $length = 8 ) {  
+    function randomString( $length = 8 ) {  
         $chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"; 
         $ret = "";  
         for ( $i = 0; $i < $length; $i++ )  

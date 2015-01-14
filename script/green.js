@@ -21,9 +21,47 @@ window.Green = function (OldGreen) {
     }
 }(window.Green);
 
-// 视图类 待完成
+// 视图类 完善中...
 Green._View = function(window, document, Green, EventEmitter) {
+    function View() {
+        this._child = null;
+        this._hasMultipleChildren = false;
+    }
 
+    View.prototype.add = function(child) {
+        if( !(child instanceof View) ) {
+            return false;
+        }
+        var childNode = child;
+
+        if (this._child instanceof Array) this._child.push(childNode);
+        else if (this._child) {
+            this._child = [this._child, childNode];
+            this._hasMultipleChildren = true;
+        }
+        else this._child = childNode;
+
+        return childNode;
+    };
+
+    View.prototype.commit = function() {
+        var result = null;
+        if (this._hasMultipleChildren) {
+            var children = this._child;
+            for (var i = 0; i < children.length; i++) {
+                result[i] = children[i].commit();
+            }
+        }
+        else if (this._child) result = this._child.commit();
+
+        return result;
+    };
+
+    // View.prototype.create = function(class) {
+
+    // };
+
+    return View;
 
 }(window, document, Green, EventEmitter);
 
@@ -1216,6 +1254,9 @@ Green.init = function(window, document, Green, Utils, EventHandler, ChatboxView,
 
 
     EventHandler.on('getHistory', function(param, converse) {
+        // leancloud 获取聊天记录是 大于等于 
+        param.timestamp -= 1; // fixed
+
         Server.getHistory(param, converse);
     });
     
