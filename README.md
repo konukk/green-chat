@@ -8,6 +8,9 @@ A simply web im, javascript chat ui component. javascript即时聊天组件
 - 聊天历史记录
 - 兼容IE8+（IE7未测试）、chrome等主流浏览器
 
+## CHANGE LOGS
+- 添加发送表情功能
+
 ## TODO
 - 群聊
 - 移动端适配
