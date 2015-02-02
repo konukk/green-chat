@@ -92,11 +92,12 @@ body{font:12px/1.5 tahoma,arial,宋体b8b\4f53,sans-serif;color:#333}
 .chatbox-wrap .c-tit .chat-opt i{margin-left:7px;cursor:pointer;font-size:18px;}
 
 .chatbox-wrap .send{position:absolute;left:0;bottom:0;z-index:101;padding:10px 10px 10px 11px;text-align:left;border:1px solid;border-color:#ccc #e2e2e2 #DDD #e2e2e2;background-color:#EAECEE;background:-webkit-gradient(linear, 0 0, 0 100%, from(#F8F9FA), to(#DADDDF));background:-moz-linear-gradient(top, #F8F9FA, #DADDDF);border-radius:0 0 4px 4px;-moz-border-radius:0 0 4px 4px;-webkit-border-radius:0 0 4px 4px;color:#383E45}
-.chatbox-wrap .send textarea{float:left;resize:none;width:300px;height:19px;line-height:19px;padding:8px 5px;border:1px solid #c7c7c7;background:url(../image/form-input.png) left top no-repeat white;border-radius:3px}
+.chatbox-wrap .send i{float:left;padding:8px 0 0;font-size:20px;color:#888;letter-spacing:10px;text-shadow: 0px 0px 2px #fff;}
+.chatbox-wrap .send textarea{float:left;resize:none;width:272px;height:19px;line-height:19px;padding:8px 5px;border:1px solid #c7c7c7;background:url(../image/form-input.png) left top no-repeat white;border-radius:3px}
 .chatbox-wrap .send .btn{float:left;display:block;width:60px;height:36px;margin:0 0 0 5px;line-height:36px;text-align:center;font-size:14px;font-family:黑体;letter-spacing:2px;color:#fff;text-decoration:none;background:#389D44;border-radius:4px;cursor:pointer;border:none}
 
 .chatbox-wrap .convers .nano{position:absolute;left:0;top:48px;width:398px;height:360px;background-color:#fff;border:1px solid #ccc;border-top:none;border-bottom:none;}
-.chatbox-wrap .convers .messages{padding:10px 20px 5px 15px;*padding:10px 35px 5px 15px;}
+.chatbox-wrap .convers .messages{padding:10px 25px 5px 15px;*padding:10px 35px 5px 15px;}
 
 .chatbox-wrap .convers .you{float:left}
 .chatbox-wrap .convers .you .time{margin:0 0 5px 55px}
@@ -159,4 +160,21 @@ body{font:12px/1.5 tahoma,arial,宋体b8b\4f53,sans-serif;color:#333}
 
 .chat-new-message .minus-pannel{background:#09a92b;color:#fff;}
 .chat-new-message .minus-pannel i{color:#ddd;}
+
+#emotions{left:0;font-size:12px;z-index:1000;background:#fff;position:absolute;border:1px solid #E8E8E8;}
+#emotions a{color:#9ABBC8;padding:2px 7px;text-decoration:none;}
+#emotions img{border:0;}
+#emotions div{margin:5px 10px;padding:1px;overflow:hidden;}
+#emotions #prev,#emotions #next{margin-left:3px;background:#eee;}
+#emotions .categorys{color:#ccc;height:23px;color:#9ABBC8;overflow:hidden;}
+#emotions .categorys a{display:inline-block;}
+#emotions .categorys a:hover{text-decoration:underline;}
+#emotions .categorys a.current{cursor:default;background:#F0F0F0;-moz-border-radius:3px;-webkit-border-radius:3px;}
+#emotions .container{padding:1px;overflow:hidden;}
+#emotions .container a{float:left;width:26px;height:22px;text-align:center;padding:4px 2px;margin:-1px 0 0 -1px;border:1px solid #e8e8e8;}
+#emotions .container a:hover{z-index:2;position:relative;border:1px solid #0095cd;}
+#emotions .page{text-align:right;}
+#emotions .page a.current{color:#666;background-color:#fff;}
+#emotions .page a{margin-left:3px;color:#0078B6;background-color:#f3f3f3;}
+#emotions .page a:hover{background-color:#e7e7e7;}
 
